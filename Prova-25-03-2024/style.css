@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, rgb(105, 2, 146), rgb(6, 143, 143), rgb(6, 137, 141)) no-repeat;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+}
+
+.left-login, .right-login {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.right-login {
+    border-radius: 0 10px 10px 0;
+}
+
+.left-login {
+    padding: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.name-student {
+    color: whitesmoke;
+}
+
+p {
+    margin: 15px 10px;
+}
+
+.input-email {
+    background-color: rgb(94, 4, 94);
+    display: flex;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.input-email > input {
+    background-color: rgb(62, 201, 206);
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin: 2px 2px 0 0;
+}
+
+.input-email > .icon-user{
+    margin: 2px 5px 0 5px;
+    color: white;
+}
+
+.input-password {
+    background-color: rgb(94, 4, 94);
+    display: flex;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.input-password > input {
+    background-color: rgb(62, 201, 206);
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin: 2px 2px 0 0;
+}
+
+.input-password > .icon-key{
+    margin: 2px 5px 0 5px;
+    color: white;
+}
+
+.btn-enter {
+    background-color: rgb(50, 180, 137);
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-enter:hover {
+    background-color: rgb(24, 121, 88);
+}
+
+.btn-forget-password {
+    background-color: white;
+    color: rgb(50, 180, 137);
+    border: 1px solid rgb(50, 180, 137);
+    outline: none;
+    text-align: center;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-forget-password:hover {
+    background-color: rgb(62, 206, 182);
+    color: white
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+input {
+    padding-left: 5px;
+}
+
+.social-media > .icon-facebook {
+    color: blue;
+}
+
+.social-media > .icon-twitter {
+    color: black;
+}
+
+.social-media > .icon-instagram {
+    color: rgb(238, 84, 156);
+}
+
+
+.right-login {
+    background: url("img/ifpr_logo.jpeg") no-repeat;
+    background-size: cover;
+}
