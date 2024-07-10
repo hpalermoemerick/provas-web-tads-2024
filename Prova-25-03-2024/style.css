@@ -1,18 +1,23 @@
+/* reseta margin e padding de todos os elementos */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    /* fundo com gradiente */
     background: linear-gradient(180deg, rgb(105, 2, 146), rgb(6, 143, 143), rgb(6, 137, 141)) no-repeat;
+    /* centraliza os itens na tela */
     display: grid;
     place-items: center;
     height: 100vh;
 }
 
 main {
+    /* cor de fundo */
     background-color: white;
     display: flex;
+    /* arredonda os cantos com 10px */
     border-radius: 10px;
 }
 
@@ -30,6 +35,7 @@ main {
 }
 
 h1 {
+    /* centraliza o texto */
     text-align: center;
     margin-bottom: 30px;
 }
@@ -53,12 +59,13 @@ p {
     background-color: rgb(62, 201, 206);
     height: 30px;
     width: 100%;
+    /* remove a borda */
     border: none;
     border-radius: 5px;
     margin: 2px 2px 0 0;
 }
 
-.input-email > .icon-user{
+.input-email > .icon-user {
     margin: 2px 5px 0 5px;
     color: white;
 }
@@ -71,7 +78,7 @@ p {
 }
 
 .input-password > input {
-    background-color: rgb(62, 201, 206);
+      background-color: rgb(62, 201, 206);
     height: 30px;
     width: 100%;
     border: none;
@@ -79,7 +86,7 @@ p {
     margin: 2px 2px 0 0;
 }
 
-.input-password > .icon-key{
+.input-password > .icon-key {
     margin: 2px 5px 0 5px;
     color: white;
 }
@@ -87,38 +94,47 @@ p {
 .btn-enter {
     background-color: rgb(50, 180, 137);
     color: white;
+    /* remove a borda */
     border: none;
     outline: none;
     text-align: center;
     width: calc(100% - 20px);
-    margin: 0 10px;
+     margin: 0 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
+/* muda o botão ao passar o mouse */
 .btn-enter:hover {
     background-color: rgb(24, 121, 88);
 }
 
 .btn-forget-password {
     background-color: white;
+    /* cor do texto */
     color: rgb(50, 180, 137);
+    /* borda */
     border: 1px solid rgb(50, 180, 137);
+    /* remove a linha de fora */
     outline: none;
     text-align: center;
+    /* calcula a largura */
     width: calc(100% - 20px);
     margin: 5px 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
+/* muda a cor ao passar o mouse */
 .btn-forget-password:hover {
     background-color: rgb(62, 206, 182);
-    color: white
+    /* cor do texto */
+    color: white;
 }
 
 .social-media {
     display: flex;
+    /* espaçamento dos itens  */
     justify-content: space-around;
     margin: 5px 0;
 }
@@ -139,8 +155,9 @@ input {
     color: rgb(238, 84, 156);
 }
 
-
 .right-login {
+    /* caminho para a imagem */
     background: url("img/ifpr_logo.jpeg") no-repeat;
+    /* ajusta o tamanho da imagem */
     background-size: cover;
 }
