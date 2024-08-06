@@ -1,3 +1,46 @@
-.nav-details {
-    background-color: white;
+:root {
+    --color1: #1C1678;
+    --color2: #8576FF;
+    --color3: #7BC9FF;
+    --color4: #92f1c6;
 }
+
+body {
+    background-color: var(--color3);
+}
+
+.nav-details {
+    background-color: var(--color1);
+}
+
+.nav li a, .nav li a:hover {
+    color: var(--color4) !important;
+}
+
+.btn {
+    background-color: var(--color1);
+    color: var(--color4) !important;
+    box-shadow: 0 0 10px var(--color1);
+    transition: background-color .5s;
+}
+
+.btn:hover {
+    background-color: var(--color4);
+    color: var(--color1) !important;
+    transform: scale(1.05);
+    color: var(--color1);
+}
+
+.title {
+    color: #1C1678;
+}
+
+.description {
+    color: var(--color1);
+}
+
+footer {
+    background-color: var(--color1);
+    color: var(--color4) !important;
+}
+
