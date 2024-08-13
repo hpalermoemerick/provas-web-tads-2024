@@ -1,8 +1,8 @@
 :root {
-    --color1: #1C1678;
-    --color2: #8576FF;
-    --color3: #7BC9FF;
-    --color4: #92f1c6;
+    --color1: #d61d1d;
+    --color2: #ffffff;
+    --color3: #ffffff;
+    --color4: #ffffff;
 }
 
 body {
@@ -14,7 +14,16 @@ body {
 }
 
 .nav li a, .nav li a:hover {
-    color: var(--color4) !important;
+    background-color: #fff;
+    color: red;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 20%;
 }
 
 .btn {
@@ -32,11 +41,40 @@ body {
 }
 
 .title {
-    color: #1C1678;
+    color: #f00;
+    font-size: 70px;
+}
+
+.title2 {
+    color: #000;
+    font-size: 70px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.title3 {
+    display: flex;
+    flex-direction: column;
 }
 
 .description {
-    color: var(--color1);
+    color: #000;
+    font-size: 20px;
+}
+
+.btn-icon {
+    text-decoration: none;
+    background-color: #f00;
+    color: #fff;
+    padding: 15px;
+    transition: .5s;
+}
+
+.btn-icon:hover {
+    background-color: #fff;
+    color: #f00;
+    padding: 12px;
+    border: 3px solid #f00;
 }
 
 footer {
