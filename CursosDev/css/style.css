@@ -1,3 +1,10 @@
+.imgCurso {
+    height: 207px;
+}
+
+.dropdown-item:hover {
+    color: #fff !important;
+}
 
 /*** Spinner Start ***/
 #spinner {
