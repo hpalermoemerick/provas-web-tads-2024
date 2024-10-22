@@ -3,9 +3,6 @@
 const form = document.querySelector('form');
 const resp = document.querySelector('h2');
 
-let mouse = document.createEvent('MouseEvent');
-mouse.initMouseEvent('mousedown', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const nome = form.inNome.value;
