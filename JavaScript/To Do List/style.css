@@ -10,7 +10,7 @@
 
 body {
     height: 100vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 #header {
@@ -31,14 +31,14 @@ form {
     background:rgba(39, 39, 39, 0.767);
 }
 
+#list {
+    height: 25vh;
+    overflow-y: auto;
+}
+
 #github {
     text-decoration: none;
     color: white;
-}
-
-#list {
-    height: 30vh;
-    overflow-y: auto;
 }
 
 #github:hover {
