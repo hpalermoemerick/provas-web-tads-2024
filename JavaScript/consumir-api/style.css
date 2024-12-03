@@ -36,7 +36,8 @@ form {
     overflow-y: auto;
 }
 
-#resultados_ruas li:hover {
+
+#resultados_ruas li {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }

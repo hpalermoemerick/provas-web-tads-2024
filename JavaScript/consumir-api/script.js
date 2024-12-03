@@ -72,11 +72,11 @@ function limparCamposNoFormCEP() {
 
 function preencherCamposNoFormCEP(data) {
     // Preenche os campos com os dados retornados da API
-    document.getElementById('rua').value = data.logradouro;
-    document.getElementById('bairro').value = data.bairro;
-    document.getElementById('cidade').value = data.localidade;;
-    document.getElementById('estado').value = data.estado;
-    document.getElementById('ibge').value = data.ibge;
+    document.getElementById('rua').value = data.logradouro || 'Não encontrado';
+    document.getElementById('bairro').value = data.bairro || 'Não encontrado';
+    document.getElementById('cidade').value = data.localidade || 'Não encontrado';
+    document.getElementById('estado').value = data.estado || 'Não encontrado';
+    document.getElementById('ibge').value = data.ibge || 'Não encontrado';
 }
 
 async function pesquisarPorRua(cidade, rua) {
@@ -165,6 +165,9 @@ function preencherCamposNoFormRua(resultados) {
     }
 
     resultados.forEach(item => {
+        if (!item.logradouro) item.logradouro = "Logradouro não encontrado";
+        if (!item.bairro) item.bairro = "Bairro não encontrado";
+
         resultados_ruas.innerHTML += `
             <li class="list-group-item d-flex align-items-center p-2">
                 ${item.logradouro}, ${item.bairro} - ${item.cep}
