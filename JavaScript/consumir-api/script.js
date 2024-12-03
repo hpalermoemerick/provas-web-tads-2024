@@ -1,5 +1,16 @@
+// Inicializa o select de cidades
+const select_cidades = document.getElementById('cidades');
+// select_cidades.innerHTML = '';
+
+// Adiciona as cidades ao select
+cidades.forEach((cidade) => {
+    const option = document.createElement('option');
+    option.text = cidade;
+    option.value = cidade;
+    select_cidades.add(option);
+});
+
 // Esconder formulário de pesquisa por rua(deixar rua_from oculto)
-// document.getElementById('cep_form').style.display = "none";
 document.getElementById('rua_form').style.display = "none";
 
 // Elemento de saída dos resultados
@@ -83,15 +94,15 @@ async function pesquisarPorRua(cidade, rua) {
     console.log("Dados: ", cidade, rua);
 
     // tira daqui e colocar globalmente
-    const cidade_form2 = document.getElementById('cidade_form2'); // global
+    const cidades = document.getElementById('cidades'); // global
     const rua_form2 = document.getElementById('rua_form2'); // global
 
     // Valida se o campo da rua não está vazio.
-    if (cidade_form2.value === "") {
+    if (cidades.value === "") {
         const erro = '<small id="erro-cidade-2" class="text-danger">Selecione uma cidade!</small>';
         let alerta_erro = document.getElementById('erro-cidade-2');
         if (!alerta_erro) {
-            cidade_form2.insertAdjacentHTML("afterend", erro);
+            cidades.insertAdjacentHTML("afterend", erro);
         }
         return;
     }
