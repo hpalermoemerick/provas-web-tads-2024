@@ -1,5 +1,10 @@
+:root {
+    --cor: rgb(90, 80, 131);
+    --cor-escura: rgb(70, 59, 112);
+}
 body {
-    background-color: rgb(144, 109, 224);
+    background-color: var(--cor);
+    /* background-color: rgb(144, 109, 224); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,4 +13,20 @@ body {
 
 form {
     width: 600px;
+}
+
+#cep:invalid {
+    border-color: red;
+}
+
+.btn-troca-form {
+    background-color: var(--cor);
+    color: #fff;
+    padding: 10px;
+    transition: .3s;
+}
+
+.btn-troca-form:hover {
+    background-color: var(--cor-escura);
+    color: #fff;
 }

@@ -1,67 +1,54 @@
-function limpa_formulário_cep() {
-    //Limpa valores do formulário de cep.
-    document.getElementById('rua').value = ("");
-    document.getElementById('bairro').value = ("");
-    document.getElementById('cidade').value = ("");
-    document.getElementById('uf').value = ("");
-    document.getElementById('ibge').value = ("");
-}
+// Esconder formulário de pesquisa por rua
+document.getElementById('rua_form').style.display = "none";
 
-function exibir_resultado_consulta(conteudo) {
-    if (!("erro" in conteudo)) {
-        //Atualiza os campos com os valores.
-        document.getElementById('rua').value = (conteudo.logradouro);
-        document.getElementById('bairro').value = (conteudo.bairro);
-        document.getElementById('cidade').value = (conteudo.localidade);
-        document.getElementById('uf').value = (conteudo.uf);
-        document.getElementById('ibge').value = (conteudo.ibge);
-    } //end if.
-    else {
-        //CEP não Encontrado.
-        limpa_formulário_cep();
-        alert("CEP não encontrado.");
-    }
-}
-
-function pesquisacep(valor) {
-
-    //Nova variável "cep" somente com dígitos.
-    var cep = valor.replace(/\D/g, '');
-
-    //Verifica se campo cep possui valor informado.
-    if (cep != "") {
-
-        //Expressão regular para validar o CEP.
-        var validacep = /^[0-9]{8}$/;
-
-        //Valida o formato do CEP.
-        if (validacep.test(cep)) {
-
-            //Preenche os campos com "..." enquanto consulta webservice.
-            document.getElementById('rua').value = "...";
-            document.getElementById('bairro').value = "...";
-            document.getElementById('cidade').value = "...";
-            document.getElementById('uf').value = "...";
-            document.getElementById('ibge').value = "...";
-
-            //Cria um elemento javascript.
-            var script = document.createElement('script');
-
-            //Sincroniza com o callback.
-            script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=exibir_resultado_consulta';
-
-            //Insere script no documento e carrega o conteúdo.
-            document.body.appendChild(script);
-
-        } //end if.
-        else {
-            //cep é inválido.
-            limpa_formulário_cep();
-            alert("Formato de CEP inválido.");
-        }
-    } //end if.
-    else {
-        //cep sem valor, limpa formulário.
-        limpa_formulário_cep();
-    }
+// realizar validação ao focar no input cep
+const input_cep = document.getElementById('cep');
+input_cep.onfocus = () => {
+    input_cep.setAttribute('pattern', '\\d{8}');
+    input_cep.setAttribute('maxlength', '8');
+    input_cep.setAttribute('required', '');
 };
+
+function exibirFormularioRua() {
+    //Exibe o formulário de busca por rua.
+    document.getElementById('cep_form').style.display = "none";
+    document.getElementById('rua_form').style.display = "block";
+}
+
+function exibirFormularioCEP() {
+    //Exibe o formulário de busca por CEP
+    document.getElementById('rua_form').style.display = "none";
+    document.getElementById('cep_form').style.display = "block";
+}
+
+async function pesquisarPorCEP(cep) {
+    console.log("CEP: " + cep);
+
+    // Valida se o campo de pesquisa não está vazio.
+    if (document.getElementById('cep').value === "") {
+        alert("Por favor, preencha o campo CEP.");
+        return;
+    }
+
+    // fazer requisição
+    try {
+        const URL = `https://viacep.com.br/ws/${cep}/json/`;
+        const response = await fetch(URL);
+        const data = await response.json();
+        console.log(data);
+        preencherCampos(data)
+    } catch (err) {
+        console.error("Erro ao fazer a requisição:", err);
+    }
+
+}
+
+
+function preencherCampos(data) {
+    // Preenche os campos com os dados retornados da API
+    document.getElementById('rua').value = data.logradouro;
+    document.getElementById('bairro').value = data.bairro;
+    document.getElementById('cidade').value = data.localidade;
+    document.getElementById('estado').value = data.estado;
+    document.getElementById('ibge').value = data.ibge;
+}

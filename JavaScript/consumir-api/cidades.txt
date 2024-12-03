@@ -1,0 +1,399 @@
+74012  Abatia  
+74039  Adrianópolis  
+74055  Agudos do Sul  
+74071  Almirante Tamandaré  
+84557  Altamira do Paraná  
+55239  Alto Paraíso
+74098  Alto Paraná  
+74110  Alto Piquiri 
+79510  Altonia  
+74136  Alvorada do Sul  
+74152  Amaporã  
+74179  Ampere  
+54631  Anahy  
+74195  Andirá  
+55093  Ângulo  
+74217  Antonina  
+74233  Antonio Olinto  
+74250  Apucarana  
+74276  Arapongas  
+74292  Arapoti 
+08303  Arapuã  
+74314  Araruna  
+74357  Araucária  
+08320  Ariranha do Ivaí  
+74373  Assai  
+79537  Assis Chateaubriand  
+74390  Astorga  
+74411  Atalaia  
+74438  Balsa Nova  
+74454  Bandeirantes  
+74470  Barbosa Ferraz  
+74519  Barra do Jacaré  
+74497  Barracão  
+08346  Bela Vista da Caroba  
+74535  Bela Vista do Paraíso  
+74551  Bituruna  
+74578  Boa Esperança  
+54712  Boa Esperança do Iguaçu  
+08362  Boa Ventura de São Roque  
+79812  Boa Vista da Aparecida  
+74594  Bocaiúva do Sul  
+08389  Bom Jesus do Sul  
+74616  Bom Sucesso  
+99791  Bom Sucesso do Sul  
+74632  Borrazópolis  
+79839  Braganey  
+55212  Brasilândia do Sul  
+74659  Cafeara  
+79855  Cafelândia  
+54917  Cafezal do Sul  
+74675  Califórnia  
+74691  Cambará  
+74713  Cambé  
+74730  Cambira  
+74756  Campina da Lagoa  
+08400  Campina do Simão  
+74772  Campina Grande do Sul  
+84751  Campo Bonito  
+74799  Campo do Tenente  
+74810  Campo Largo  
+08427  Campo Magro  
+74837  Campo Mourão  
+74853  Cândido de Abreu  
+54992  Candói  
+84514  Cantagalo  
+74870  Capanema  
+74896  Capitão Leônidas Marques  
+08443  Carambeí  
+74918  Carlópolis  
+74934  Cascavel  
+74950  Castro  
+74977  Catanduvas  
+74993  Centenário do Sul  
+75019  Cerro Azul  
+79570  Céu Azul  
+75035  Chopinzinho  
+75051  Cianorte  
+75078  Cidade Gaúcha  
+75094  Clevelândia  
+75132  Colombo  
+75159  Colorado  
+75175  Congonhinhas  
+75191  Conselheiro Mairinck  
+75213  Contenda  
+75230  Corbélia  
+75256  Cornélio Procópio  
+08460  Coronel Domingos Soares  
+75272  Coronel Vivida  
+84794  Corumbataí do Sul  
+75337  Cruz Machado  
+54739  Cruzeiro do Iguaçu  
+75299  Cruzeiro do Oeste  
+75310  Cruzeiro do Sul  
+08486  Cruzmaltina  
+75353  Curitiba  
+75370  Curiúva  
+75396  Diamante do Norte  
+99155  Diamante do Oeste  
+54658  Diamante do Sul  
+75418  Dois Vizinhos  
+84654  Douradina  
+75434  Doutor Camargo  
+54496  Doutor Ulysses  
+75450  Enéas Marques  
+75477  Engenheiro Beltrão  
+55298  Entre Rios do Oeste  
+08508  Esperança Nova  
+08524  Espigão Alto do Iguaçu  
+55115  Farol  
+75493  Faxinal  
+99830  Fazenda Rio Grande  
+75515  Fênix  
+08540  Fernandes Pinheiro  
+84573  Figueira  
+54755  Flor da Serra do Sul  
+75531  Floraí  
+75558  Floresta  
+75574  Florestópolis  
+75590  Flórida  
+75612  Formosa do Oeste  
+75639  Foz do Iguaçu  
+08567  Foz do Jordão  
+79774  Francisco Alves  
+75655  Francisco Beltrão  
+75671  General Carneiro  
+99473  Godoy Moreira  
+75698  Goioerê  
+08583  Goioxim  
+79596  Grandes Rios  
+75710  Guaíra  
+75736  Guairacá  
+08605  Guamiranga  
+75752  Guapirama  
+75779  Guaporema  
+75795  Guaraci  
+75817  Guaraniacú  
+75833  Guarapuava  
+75850  Guaraqueçaba  
+75876  Guaratuba  
+99813  Honório Serpa  
+75892  Ibaiti  
+99490  Ibema  
+75914  Ibiporã  
+75930  Icaraima  
+75957  Iguaracu  
+54674  Iguatu  
+08621  Imbaú  
+75973  Imbituva  
+75990  Inácio Martins  
+76015  Inajá  
+79618  Indianópolis  
+76031  Ipiranga  
+76058  Iporã  
+54852  Iracema do Oeste  
+76074  Irati  
+76090  Iretama  
+76112  Itaguajé  
+55255  Itaipulândia  
+76139  Itambaracá  
+76155  Itambé  
+76171  Itapejara do Oeste  
+54518  Itaperuçu  
+76198  Itauna do Sul  
+76210  Ivai  
+76236  Ivaiporã  
+99554  Ivaté  
+76252  Ivatuba  
+76279  Jaboti  
+76295  Jacarezinho  
+76317  Jaguapitã  
+76333  Jaguariaiva  
+76350  Jandaia do Sul  
+76376  Janiópolis  
+76392  Japira  
+76414  Japura  
+76430  Jardim Alegre  
+76457  Jardim Olinda  
+76473  Jataizinho  
+79979  Jesuítas  
+76490  Joaquim Távora  
+76511  Jundiai do Sul  
+84638  Juranda  
+76538  Jussara  
+76554  Kaloré  
+76570  Lapa  
+55018  Laranjal  
+76597  Laranjeiras do Sul  
+76619  Leópolis  
+55077  Lidianópolis  
+99597  Lindoeste  
+76635  Loanda  
+76651  Lobato  
+76678  Londrina  
+84816  Luiziana  
+84590  Lunardelli  
+76694  Lupionópolis  
+76716  Mallet  
+76732  Mamboré  
+76759  Mandaguaçu  
+76775  Mandaguari  
+76791  Mandirituba  
+08648  Manfrinópolis  
+75116  Mangueirinha  
+76813  Manoel Ribas  
+76830  Marechal Cândido Rondon  
+76856  Maria Helena  
+76872  Marialva  
+74330  Marilandia do Sul  
+79758  Marilena  
+76899  Mariluz  
+76910  Maringá  
+76937  Mariópolis  
+54879  Maripa  
+76953  Marmeleiro  
+08664  Marquinho  
+76970  Marumbi  
+76996  MatelÂndia  
+79634  Matinhos  
+55034  Mato Rico  
+54593  Mauá da Serra  
+77011  Medianeira  
+55310  Mercedes  
+77038  Mirador  
+77054  Miraselva  
+84697  Missal  
+77070  Moreira Sales  
+77097  Morretes  
+77119  Munhoz de Mello  
+77135  Nossa Senhora das Graças  
+77151  Nova Aliança do Ivai  
+77178  Nova América da Colina  
+79650  Nova Aurora  
+77194  Nova Cantu  
+77216  Nova Esperança  
+54771  Nova Esperança do Sudoeste  
+77232  Nova Fátima  
+54798  Nova Laranjeiras  
+77259  Nova Londrina  
+79677  Nova Olímpia  
+79952  Nova Prata do Iguaçu  
+54577  Nova Santa Barbara  
+79790  Nova Santa Rosa  
+99139  Nova Tebas  
+55174  Novo Itacolomi  
+77275  Ortigueira  
+77291  Ourizona  
+99651  Ouro Verde do Oeste  
+77313  Paiçandu  
+77330  Palmas  
+77356  Palmeira  
+77372  Palmital  
+77399  Palotina  
+77410  Paraíso do Norte  
+77437  Paranacity  
+77453  Paranaguá  
+77470  Paranapoema  
+77496  Paranavaí  
+55336  Pato Bragado  
+77518  Pato Branco  
+77534  Paula Freitas  
+77550  Paulo Frontin  
+77577  Peabiru  
+08680  Perobal  
+79693  Pérola  
+77593  Pérola do Oeste  
+77615  Piên  
+54534  Pinhais  
+54950  Pinhal de São Bento  
+77631  Pinhalão  
+77658  Pinhão  
+77674  Pirai do Sul  
+77690  Piraquara  
+77712  Pitanga  
+54615  Pitangueiras  
+77739  Planaltina do Paraná  
+77755  Planalto  
+77771  Ponta Grossa  
+08702  Pontal do Paraná  
+77798  Porecatu  
+77810  Porto Amazonas  
+08729  Porto Barreiro  
+77836  Porto Rico  
+77852  Porto Vitória  
+08745  Prado Ferreira  
+79910  Pranchita  
+77879  Presidente Castelo Branco  
+77895  Primeiro de Maio  
+77917  Prudentópolis  
+08761  Quarto Centenário  
+77933  Quatiguá  
+77950  Quatro Barras  
+55352  Quatro Pontes  
+79553  Quedas do Iguaçu  
+77976  Querência do Norte  
+77992  Quinta do Sol  
+78018  Quitandinha  
+55271  Ramilândia  
+78034  Rancho Alegre  
+55131  Rancho Alegre do Oeste  
+78050  Realeza  
+78077  Rebouças  
+78093  Renascença  
+78115  Reserva  
+08788  Reserva do Iguaçu  
+78131  Ribeirão Claro  
+78158  Ribeirão do Pinhal  
+78174  Rio Azul  
+78190  Rio Bom  
+54810  Rio Bonito do Iguaçu  
+08800  Rio Branco do Ivaí  
+78212  Rio Branco do Sul  
+78239  Rio Negro  
+78255  Rolândia  
+78271  Roncador  
+78298  Rondon  
+84735  Rosário do Ivai  
+78310  Sabaudia  
+78336  Salgado Filho  
+78352  Salto do Itararé  
+78379  Salto do Lontra  
+78395  Santa Amélia  
+78417  Santa Cecília do Pavão  
+78433  Santa Cruz do Monte Castelo  
+78450  Santa Fé  
+79715  Santa Helena  
+78476  Santa Inês  
+78492  Santa Isabel do Ivai  
+78514  Santa Izabel do Oeste  
+54690  Santa Lúcia  
+55050  Santa Maria do Oeste  
+78530  Santa Mariana  
+55190  Santa Mônica  
+99694  Santa Tereza do Oeste  
+84670  Santa Terezinha de Itaipu  
+78557  Santana do Itararé  
+78590  Santo Antonio da Platina  
+78611  Santo Antonio do Caiuá  
+78638  Santo Antonio do Paraíso  
+78573  Santo Antonio do Sudoeste  
+78654  Santo Inácio  
+78670  São Carlos do Ivai  
+78697  São Jerônimo da Serra  
+78719  São João  
+78735  São João do Caiuá  
+78751  São João do Ivai  
+78778  São João do Triunfo  
+78794  São Jorge do Ivai  
+78816  São Jorge do Oeste  
+79995  São Jorge do Patrocínio  
+78832  São José da Boa Vista  
+84719  São José das Palmeiras  
+78859  São José dos Pinhais  
+55158  São Manoel do Paraná  
+78875  São Mateus do Sul  
+78891  São Miguel do Iguaçu  
+54895  São Pedro do Iguaçu  
+78913  São Pedro do Ivai  
+78930  São Pedro do Paraná  
+78956  São Sebastião da Amoreira  
+78972  São Tomé  
+78999  Sapopema  
+84611  Sarandi  
+54933  Saudade do Iguaçu  
+79014  Sengés  
+08826  Serranópolis do Iguaçu  
+79030  Sertaneja  
+79057  Sertanópolis  
+79073  Siqueira Campos  
+84778  Sulina  
+08842  Tamarana  
+79090  Tamboara  
+79111  Tapejara  
+79731  Tapira  
+79138  Teixeira Soares  
+79154  Telêmaco Borba  
+79170  Terra Boa  
+79197  Terra Rica  
+79219  Terra Roxa  
+79235  Tibagi  
+79251  Tijucas do Sul  
+79278  Toledo  
+79294  Tomazina  
+79871  Três Barras do Paraná  
+54550  Tunas do Paraná  
+79316  Tuneiras do Oeste  
+79936  Tupãssi  
+84530  Turvo  
+79332  Ubiratã  
+79359  Umuarama  
+79375  União da Vitória  
+79391  Uniflor  
+79413  Uraí  
+54976  Ventania  
+79898  Vera Cruz do Oeste  
+79456  Verê   
+54836  Virmond  
+79472  Vitorino  
+79430  Wenceslau Braz  
+79499  Xambre
