@@ -19,10 +19,6 @@ form {
     width: 600px;
 }
 
-#cep:invalid {
-    border-color: red;
-}
-
 .btn-troca-form {
     background-color: var(--cor);
     color: #fff;
@@ -36,7 +32,7 @@ form {
 }
 
 #resultados_ruas {
-    height: 160px;
+    height: 150px;
     overflow-y: auto;
 }
 

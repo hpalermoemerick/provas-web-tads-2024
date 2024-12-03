@@ -1,17 +1,12 @@
 // Esconder formulário de pesquisa por rua(deixar rua_from oculto)
-document.getElementById('cep_form').style.display = "none";
-// document.getElementById('rua_form').style.display = "none";
+// document.getElementById('cep_form').style.display = "none";
+document.getElementById('rua_form').style.display = "none";
 
 // Elemento de saída dos resultados
 const resultados_ruas = document.getElementById('resultados_ruas');
 
-// Realizar validação ao focar no input cep
+// Input cep
 const input_cep = document.getElementById('cep');
-input_cep.onfocus = () => {
-    input_cep.setAttribute('pattern', '\\d{8}');
-    input_cep.setAttribute('maxlength', '8');
-    input_cep.setAttribute('required', '');
-};
 
 function exibirFormularioRua() {
     //Exibe o formulário de busca por rua.
@@ -28,7 +23,12 @@ function exibirFormularioCEP() {
 async function pesquisarPorCEP(cep) {
     // Valida se o campo de cep não está vazio.
     if (document.getElementById('cep').value === "") {
-        alert("Por favor, preencha o campo do CEP.");
+        const erro = '<small id="erro-cep" class="text-danger">Preencha o campo do CEP!</small>';
+
+        let alerta_erro = document.getElementById('erro-cep');
+        if (!alerta_erro) {
+            input_cep.insertAdjacentHTML("afterend", erro);
+        }
         return;
     }
 
@@ -38,17 +38,43 @@ async function pesquisarPorCEP(cep) {
         const response = await fetch(URL);
         const data = await response.json();
         console.log(data);
-        preencherCamposNoFormCEP(data)
+
+        if (Object.hasOwn(data, 'cep')) {
+            let alerta_erro = document.getElementById('erro-cep');
+            if (alerta_erro) {
+                alerta_erro.remove();
+            }
+
+            preencherCamposNoFormCEP(data);
+        } else {
+            limparCamposNoFormCEP();
+            const erro = '<small id="erro-cep" class="text-danger">Nenhum resultado encontrado!</small>';
+
+            let alerta_erro = document.getElementById('erro-cep');
+            if (!alerta_erro) {
+                input_cep.insertAdjacentHTML("afterend", erro);
+            }
+        }
+
     } catch (err) {
         console.error("Erro ao fazer a requisição:", err);
     }
+}
+
+function limparCamposNoFormCEP() {
+    // Limpa os campos do formulário de CEP
+    document.getElementById('rua').value = '';
+    document.getElementById('bairro').value = '';
+    document.getElementById('cidade').value = '';
+    document.getElementById('estado').value = '';
+    document.getElementById('ibge').value = '';
 }
 
 function preencherCamposNoFormCEP(data) {
     // Preenche os campos com os dados retornados da API
     document.getElementById('rua').value = data.logradouro;
     document.getElementById('bairro').value = data.bairro;
-    document.getElementById('cidade').value = data.localidade;
+    document.getElementById('cidade').value = data.localidade;;
     document.getElementById('estado').value = data.estado;
     document.getElementById('ibge').value = data.ibge;
 }
