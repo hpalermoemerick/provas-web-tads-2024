@@ -11,6 +11,10 @@ body {
     height: 100vh;
 }
 
+.div-form {
+    max-height: 580px;
+}
+
 form {
     width: 600px;
 }
@@ -29,4 +33,14 @@ form {
 .btn-troca-form:hover {
     background-color: var(--cor-escura);
     color: #fff;
+}
+
+#resultados_ruas {
+    height: 160px;
+    overflow-y: auto;
+}
+
+#resultados_ruas li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }

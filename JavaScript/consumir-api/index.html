@@ -12,63 +12,67 @@
 
 <body>
 
-    <div class="bg-light rounded-2 shadow-sm p-4" id="cep_form">
+    <div class="bg-light rounded-2 p-4 div-form" id="cep_form">
         <form id="form-dados" class="px-4 py-3">
             <div class="text-center mb-4">
                 <h1>Consulta de Dados via API CEP</h1>
             </div>
-    
+
             <!-- Linha com CEP -->
             <div class="mb-3">
                 <label for="cep" class="form-label">CEP</label>
-                <input type="text" name="cep" id="cep" class="form-control" placeholder="Ex.: 00000000" onblur="pesquisarPorCEP(this.value)">
+                <input type="text" name="cep" id="cep" class="form-control" placeholder="Ex.: 00000000"
+                    onblur="pesquisarPorCEP(this.value)">
             </div>
-    
+
             <!-- Linha com Rua e Bairro -->
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="rua" class="form-label">Rua</label>
-                    <input type="text" name="rua" id="rua" class="form-control" placeholder="Ex.: Avenida Brasil" required>
+                    <input type="text" name="rua" id="rua" class="form-control" placeholder="Ex.: Avenida Brasil"
+                        required>
                 </div>
                 <div class="col-md-6">
                     <label for="bairro" class="form-label">Bairro</label>
                     <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Ex.: Centro">
                 </div>
             </div>
-    
+
             <!-- Linha com Cidade e Estado -->
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Ex.: São Paulo" required>
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Ex.: São Paulo"
+                        required>
                 </div>
-            <div class="col-md-6">      
+                <div class="col-md-6">
                     <label for="estado" class="form-label">Estado</label>
-                    <input type="text" name="estado" id="estado" class="form-control" placeholder="Ex.: SP" maxlength="2" required>
+                    <input type="text" name="estado" id="estado" class="form-control" placeholder="Ex.: SP"
+                        maxlength="2" required>
                 </div>
             </div>
-    
+
             <!-- Linha com Código IBGE -->
             <div class="mb-3">
                 <label for="ibge" class="form-label">Código IBGE</label>
                 <input type="text" name="ibge" id="ibge" class="form-control" placeholder="Ex.: 3550308" pattern="\d*">
             </div>
-    
-            <!-- Botão de pesquisa -->            
+
+            <!-- Botão de pesquisa -->
         </form>
 
         <div class="text-center mx-4">
             <button class="btn w-100 btn-troca-form" onclick="exibirFormularioRua()">Pesquisar por Cidade</button>
         </div>
     </div>
-    
 
-    <div class="bg-light p-4 rounded shadow-sm" id="rua_form">
+
+    <div class="bg-light p-4 rounded div-form" id="rua_form">
         <h2 class="text-center mb-4">Pesquisar por Rua</h2>
         <form id="form-rua">
             <div class="mb-3">
-                <label for="cidade" class="form-label">Selecione a Cidade:</label>
-                <select id="cidade" name="cidade" class="form-select" required>
+                <label for="cidade_form2" class="form-label">Selecione a Cidade:</label>
+                <select id="cidade_form2" name="cidade_form2" class="form-select" required>
                     <option value="" selected disabled>Selecione uma cidade</option>
                     <option value="Abatia">Abatiá</option>
                     <option value="Adrianópolis">Adrianópolis</option>
@@ -80,22 +84,32 @@
                     <option value="Alto Piquiri">Alto Piquiri</option>
                     <option value="Altonia">Altônia</option>
                     <option value="Alvorada do Sul">Alvorada do Sul</option>
-                    <option value="Cascavel" selected>Cascavel</option>
+                    <option value="Cascavel">Cascavel</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="rua" class="form-label">Digite o Nome da Rua:</label>
-                <input type="text" id="rua" name="rua" class="form-control" placeholder="Ex.: Avenida Brasil" required>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-troca-form w-100">Buscar</button>
+                <label for="rua_form2" class="form-label">Digite o Nome da Rua:</label>
+                <input type="text" id="rua_form2" name="rua_form2" class="form-control"
+                    placeholder="Ex.: Avenida Brasil" required
+                    onblur="pesquisarPorRua(document.querySelector('#cidade_form2').value, this.value)" value="Souza">
             </div>
         </form>
 
         <div class="text-center mt-2">
-            <button type="submit" class="btn btn-troca-form w-100" onclick="exibirFormularioCEP()">Pesquisar por CEP</button>
+            <button type="submit" class="btn btn-troca-form w-100" onclick="exibirFormularioCEP()">Pesquisar por
+                CEP</button>
         </div>
-        
+
+
+        <div class="mt-3">
+            <div class="bg-dark text-light p-2 fs-5">Resultados</div>
+            <ul class="list-group" id="resultados_ruas">
+                <li class="list-group-item d-flex justify-content-center align-items-center p-4">
+                    <h5>Nenhuma pesquisa realizada.</h5>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
