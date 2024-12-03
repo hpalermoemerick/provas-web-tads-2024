@@ -139,13 +139,10 @@ function preencherCamposNoFormRua(resultados) {
     }
 
     resultados.forEach(item => {
-        const li = document.createElement('li');
-        li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-
-        const texto = `${item.logradouro}, ${item.bairro} - ${item.cep}`;
-        li.textContent = texto;
-
-        // Adiciona o item na lista
-        resultados_ruas.appendChild(li);
+        resultados_ruas.innerHTML += `
+            <li class="list-group-item d-flex align-items-center p-2">
+                ${item.logradouro}, ${item.bairro} - ${item.cep}
+            </li>
+        `;
     });
 }
