@@ -1,6 +1,16 @@
+window.addEventListener("DOMContentLoaded", () => {
+    const form1 = document.getElementById("form_pesquisa_cep");
+    const form2 = document.getElementById("form_pesquisa_rua");
+
+    // Configurar o estado inicial dos formulários
+    form1.style.left = "50%"; // Centraliza o formulário 1
+    form1.style.opacity = "1";
+    form2.style.left = "150%"; // Move o formulário 2 para fora da tela
+    form2.style.opacity = "0";
+});
+
 // Inicializa o select de cidades
 const select_cidades = document.getElementById('cidades');
-// select_cidades.innerHTML = '';
 
 // Adiciona as cidades ao select
 cidades.forEach((cidade) => {
@@ -10,25 +20,28 @@ cidades.forEach((cidade) => {
     select_cidades.add(option);
 });
 
-// Esconder formulário de pesquisa por rua(deixar rua_from oculto)
-document.getElementById('rua_form').style.display = "none";
-
-// Elemento de saída dos resultados
+// Variáveis globais
+const divFormCep = document.getElementById('form_pesquisa_cep');
+const divFormRua = document.getElementById('form_pesquisa_rua');
+const btn_para_cep = document.getElementById('btn_para_cep');
+const btn_para_rua = document.getElementById('btn_para_rua');
+const input_cep = document.getElementById('cep');
 const resultados_ruas = document.getElementById('resultados_ruas');
 
-// Input cep
-const input_cep = document.getElementById('cep');
-
 function exibirFormularioRua() {
-    //Exibe o formulário de busca por rua.
-    document.getElementById('cep_form').style.display = "none";
-    document.getElementById('rua_form').style.display = "block";
+    //Exibe o formulário de busca por rua
+    divFormCep.style.left = "-50%";
+    divFormCep.style.opacity = "0";
+    divFormRua.style.left = "50%";
+    divFormRua.style.opacity = "1";
 }
 
 function exibirFormularioCEP() {
     //Exibe o formulário de busca por CEP
-    document.getElementById('rua_form').style.display = "none";
-    document.getElementById('cep_form').style.display = "block";
+    divFormCep.style.left = "50%";
+    divFormCep.style.opacity = "1";
+    divFormRua.style.left = "150%";
+    divFormRua.style.opacity = "0";
 }
 
 async function pesquisarPorCEP(cep) {
@@ -130,7 +143,7 @@ async function pesquisarPorRua(cidade, rua) {
     // Exibir o gif enquanto espera os dados
     resultados_ruas.innerHTML = `
         <div class="mt-3" id="loading_gif">
-            <img src="loading-gif.gif" alt="Loading..." class="mx-auto d-block" width="50">
+            <img src="assets/img/loading-gif.gif" alt="Loading..." class="mx-auto d-block" width="50" style="positon: absolute; z-index: 99;">
         </div>
     `;
 
