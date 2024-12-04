@@ -5,7 +5,10 @@
 
 body {
     background-color: var(--cor);
-    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    /* overflow-x: hidden; */
 }
 
 .div-form {
@@ -50,7 +53,7 @@ form {
 }
 
 /* Animações dos formulários */
-#form_pesquisa_cep, #form_pesquisa_rua {
+/* #form_pesquisa_cep, #form_pesquisa_rua {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,4 +64,4 @@ form {
 #form_pesquisa_rua {
     left: 150%;
     opacity: 0;
-}
+} */

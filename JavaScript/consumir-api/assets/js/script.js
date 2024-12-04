@@ -1,13 +1,13 @@
-window.addEventListener("DOMContentLoaded", () => {
-    const form1 = document.getElementById("form_pesquisa_cep");
-    const form2 = document.getElementById("form_pesquisa_rua");
+// window.addEventListener("DOMContentLoaded", () => {
+//     const form1 = document.getElementById("form_pesquisa_cep");
+//     const form2 = document.getElementById("form_pesquisa_rua");
 
-    // Configurar o estado inicial dos formulários
-    form1.style.left = "50%"; // Centraliza o formulário 1
-    form1.style.opacity = "1";
-    form2.style.left = "150%"; // Move o formulário 2 para fora da tela
-    form2.style.opacity = "0";
-});
+//     // Configurar o estado inicial dos formulários
+//     form1.style.left = "50%"; // Centraliza o formulário 1
+//     form1.style.opacity = "1";
+//     form2.style.left = "150%"; // Move o formulário 2 para fora da tela
+//     form2.style.opacity = "0";
+// });
 
 // Inicializa o select de cidades
 const select_cidades = document.getElementById('cidades');
@@ -28,20 +28,28 @@ const btn_para_rua = document.getElementById('btn_para_rua');
 const input_cep = document.getElementById('cep');
 const resultados_ruas = document.getElementById('resultados_ruas');
 
+divFormRua.style.display = 'none';
+
 function exibirFormularioRua() {
+    divFormCep.style.display = 'none';
+    divFormRua.style.display = 'block';
+
     //Exibe o formulário de busca por rua
-    divFormCep.style.left = "-50%";
-    divFormCep.style.opacity = "0";
-    divFormRua.style.left = "50%";
-    divFormRua.style.opacity = "1";
+    // divFormCep.style.left = "-50%";
+    // divFormCep.style.opacity = "0";
+    // divFormRua.style.left = "50%";
+    // divFormRua.style.opacity = "1";
 }
 
 function exibirFormularioCEP() {
+    divFormCep.style.display = 'block';
+    divFormRua.style.display = 'none';
+    
     //Exibe o formulário de busca por CEP
-    divFormCep.style.left = "50%";
-    divFormCep.style.opacity = "1";
-    divFormRua.style.left = "150%";
-    divFormRua.style.opacity = "0";
+    // divFormCep.style.left = "50%";
+    // divFormCep.style.opacity = "1";
+    // divFormRua.style.left = "150%";
+    // divFormRua.style.opacity = "0";
 }
 
 async function pesquisarPorCEP(cep) {
