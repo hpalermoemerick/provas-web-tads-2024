@@ -28,7 +28,7 @@ const btn_para_rua = document.getElementById('btn_para_rua');
 const input_cep = document.getElementById('cep');
 const resultados_ruas = document.getElementById('resultados_ruas');
 
-divFormCep.style.display = 'none';
+divFormRua.style.display = 'none';
 
 function exibirFormularioRua() {
     divFormCep.style.display = 'none';
