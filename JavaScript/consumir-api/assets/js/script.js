@@ -28,7 +28,7 @@ const btn_para_rua = document.getElementById('btn_para_rua');
 const input_cep = document.getElementById('cep');
 const resultados_ruas = document.getElementById('resultados_ruas');
 
-divFormRua.style.display = 'none';
+divFormCep.style.display = 'none';
 
 function exibirFormularioRua() {
     divFormCep.style.display = 'none';
@@ -44,7 +44,7 @@ function exibirFormularioRua() {
 function exibirFormularioCEP() {
     divFormCep.style.display = 'block';
     divFormRua.style.display = 'none';
-    
+
     //Exibe o formulário de busca por CEP
     // divFormCep.style.left = "50%";
     // divFormCep.style.opacity = "1";
@@ -150,7 +150,7 @@ async function pesquisarPorRua(cidade, rua) {
 
     // Exibir o gif enquanto espera os dados
     resultados_ruas.innerHTML = `
-        <div class="mt-3" id="loading_gif">
+        <div class="text-white d-flex justify-content-center align-items-center p-2 h-100" id="loading_gif">
             <img src="assets/img/loading-gif.gif" alt="Loading..." class="mx-auto d-block" width="50" style="positon: absolute; z-index: 99;">
         </div>
     `;
@@ -174,9 +174,9 @@ async function pesquisarPorRua(cidade, rua) {
     } catch (err) {
         console.error("Erro ao fazer a requisição:", err);
         resultados_ruas.innerHTML = `
-            <li class="list-group-item d-flex justify-content-center align-items-center p-2">
-                <h5>Nenhuma resultado encontrado.</h5>
-            </li>
+            <div class="text-white d-flex justify-content-center align-items-center p-2 h-100">
+                <h5>Nenhum resultado encontrado.</h5>
+            </div>
         `;
 
     }
@@ -189,10 +189,11 @@ function preencherCamposNoFormRua(resultados) {
     // Se não houver resultados
     if (resultados.length === 0) {
         resultados_ruas.innerHTML = `
-            <li class="list-group-item d-flex justify-content-center align-items-center p-2">
-                <h5>Nenhuma resultado encontrado.</h5>
-            </li>
+            <div class="text-white d-flex justify-content-center align-items-center p-2 h-100">
+                <h5>Nenhum resultado encontrado.</h5>
+            </div>
         `;
+        console.log("object")
         return;
     }
 
@@ -201,9 +202,9 @@ function preencherCamposNoFormRua(resultados) {
         if (!item.bairro) item.bairro = "Bairro não encontrado";
 
         resultados_ruas.innerHTML += `
-            <li class="list-group-item d-flex align-items-center p-2">
+            <div class="text-white d-flex align-items-center p-2">
                 ${item.logradouro}, ${item.bairro} - ${item.cep}
-            </li>
+            </div>
         `;
     });
 }

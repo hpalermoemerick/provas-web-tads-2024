@@ -37,6 +37,7 @@ form {
 }
 
 #resultados_ruas {
+    background-color: var(--cor);
     height: 150px;
     overflow-y: auto;
     position: relative;
@@ -46,10 +47,6 @@ form {
     background-color: var(--cor);
     color: #fff;
     cursor: pointer;
-}
-
-#resultados_ruas li:nth-child(1) {
-    border-radius: 0;
 }
 
 /* Animações dos formulários */
