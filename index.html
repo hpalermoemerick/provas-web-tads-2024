@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troca de Formulários</title>
+  <style>
+    /* Estilos principais */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    /* Container dos formulários */
+    .form-container {
+      position: relative;
+      width: 400px;
+      height: 300px;
+    }
+
+    /* Estilos base dos formulários */
+    .form-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: white;
+      border-radius: 8px;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    /* Formulário oculto inicialmente */
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <!-- Formulário de busca por CEP -->
+    <div id="form_pesquisa_cep" class="form-wrapper">
+      <h2>Busca por CEP</h2>
+      <input type="text" placeholder="Digite seu CEP">
+      <button onclick="exibirFormularioRua()">Buscar por Rua</button>
+    </div>
+
+    <!-- Formulário de busca por Rua -->
+    <div id="form_pesquisa_rua" class="form-wrapper hidden">
+      <h2>Busca por Rua</h2>
+      <input type="text" placeholder="Digite sua Rua">
+      <button onclick="exibirFormularioCEP()">Voltar ao CEP</button>
+    </div>
+  </div>
+
+  <script>
+    // Referências aos formulários
+    const divFormCep = document.getElementById('form_pesquisa_cep');
+    const divFormRua = document.getElementById('form_pesquisa_rua');
+
+    function exibirFormularioRua() {
+      // Exibe o formulário de busca por Rua
+      divFormCep.classList.add('hidden');
+      divFormRua.classList.remove('hidden');
+    }
+
+    function exibirFormularioCEP() {
+      // Exibe o formulário de busca por CEP
+      divFormCep.classList.remove('hidden');
+      divFormRua.classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

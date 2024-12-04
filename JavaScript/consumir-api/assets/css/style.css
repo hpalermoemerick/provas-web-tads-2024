@@ -5,10 +5,6 @@
 
 body {
     background-color: var(--cor);
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    /* overflow-x: hidden; */
 }
 
 .div-form {
@@ -50,15 +46,17 @@ form {
 }
 
 /* Animações dos formulários */
-/* #form_pesquisa_cep, #form_pesquisa_rua {
+#form_pesquisa_cep,
+#form_pesquisa_rua {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: left 0.5s ease, opacity 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#form_pesquisa_rua {
-    left: 150%;
+.hidden {
     opacity: 0;
-} */
+    visibility: hidden;
+}
